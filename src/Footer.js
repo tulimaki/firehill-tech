@@ -5,10 +5,6 @@ import {
   withStyles
 } from '@material-ui/core';
 import {
-  Email,
-  Face,
-} from '@material-ui/icons';
-import {
   FontAwesomeIcon
 } from '@fortawesome/react-fontawesome'
 import {
