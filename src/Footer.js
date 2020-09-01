@@ -7,15 +7,20 @@ import {
 import {
   Email,
   Face,
-  GitHub,
-  LinkedIn
 } from '@material-ui/icons';
 import {
   FontAwesomeIcon
 } from '@fortawesome/react-fontawesome'
 import {
-  faPaypal
+  faGithub,
+  faLinkedin,
+  faPaypal,
 } from '@fortawesome/free-brands-svg-icons'
+import {
+  faEnvelope,
+  faUserCircle
+} from '@fortawesome/free-solid-svg-icons'
+
 
 const styles = theme => ({
   footer: {
@@ -44,22 +49,22 @@ function Footer(props) {
       <BottomNavigationAction
         value="#who"
         label="Who I am"
-        icon={<Face></Face>}
+        icon={<FontAwesomeIcon icon={faUserCircle} size="2x" />}
       />
       <BottomNavigationAction
         value="#contact"
         label="Contact"
-        icon={<Email></Email>}
+        icon={<FontAwesomeIcon icon={faEnvelope} size="2x" />}
       />
       <BottomNavigationAction
         value={process.env.REACT_APP_MY_GITHUB || ""}
         label="GitHub"
-        icon={<GitHub></GitHub>}
+        icon={<FontAwesomeIcon icon={faGithub} size="2x" />}
       />
       <BottomNavigationAction
         value={process.env.REACT_APP_MY_LINKEDIN || ""}
         label="LinkedIn"
-        icon={<LinkedIn></LinkedIn>}
+        icon={<FontAwesomeIcon icon={faLinkedin} size="2x" />}
       />
       <BottomNavigationAction
         value={process.env.REACT_APP_MY_PAYPAL || ""}
