@@ -10,6 +10,12 @@ import {
   GitHub,
   LinkedIn
 } from '@material-ui/icons';
+import {
+  FontAwesomeIcon
+} from '@fortawesome/react-fontawesome'
+import {
+  faPaypal
+} from '@fortawesome/free-brands-svg-icons'
 
 const styles = theme => ({
   footer: {
@@ -54,6 +60,11 @@ function Footer(props) {
         value={process.env.REACT_APP_MY_LINKEDIN || ""}
         label="LinkedIn"
         icon={<LinkedIn></LinkedIn>}
+      />
+      <BottomNavigationAction
+        value={process.env.REACT_APP_MY_PAYPAL || ""}
+        label="PayPal.Me"
+        icon={<FontAwesomeIcon icon={faPaypal} size="2x" />}
       />
     </BottomNavigation>
   );
