@@ -41,8 +41,6 @@ class App extends React.Component {
           <Box display="flex" flexDirection="column" flex={1} alignItems="center">
             <Typography id="who" variant="h3">Who I am</Typography>
             <Info />
-            <Typography id="contact" variant="h3">Contact</Typography>
-            <Contact />
           </Box>
         </Container>
         <Footer />
