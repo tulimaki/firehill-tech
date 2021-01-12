@@ -48,11 +48,6 @@ function Footer(props) {
         icon={<FontAwesomeIcon icon={faUserCircle} size="2x" />}
       />
       <BottomNavigationAction
-        value="#contact"
-        label="Contact"
-        icon={<FontAwesomeIcon icon={faEnvelope} size="2x" />}
-      />
-      <BottomNavigationAction
         value={process.env.REACT_APP_MY_GITHUB || ""}
         label="GitHub"
         icon={<FontAwesomeIcon icon={faGithub} size="2x" />}

@@ -14,7 +14,8 @@ import Footer from './Footer.js';
 
 const styles = theme => ({
   container: {
-    'background-color': '#ffffff'
+    'background-color': '#ffffff',
+    'margin-bottom': '100px'
   }
 })
 
