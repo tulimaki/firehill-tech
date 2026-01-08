@@ -1,13 +1,13 @@
 import React from 'react';
 import {
   BottomNavigation,
-  BottomNavigationAction,
-  withStyles
-} from '@material-ui/core';
+  BottomNavigationAction
+} from '@mui/material';
 import {
   FontAwesomeIcon
 } from '@fortawesome/react-fontawesome'
 import {
+  faFlickr,
   faGithub,
   faLinkedin,
   faPaypal,
@@ -17,18 +17,7 @@ import {
   faUserCircle
 } from '@fortawesome/free-solid-svg-icons'
 
-
-const styles = theme => ({
-  footer: {
-      width: '100%',
-      position: 'fixed',
-      bottom: 0,
-  },
-})
-
-
-function Footer(props) {
-  const { classes } = props;
+function Footer() {
   return (
     <BottomNavigation
       value={null}
@@ -40,7 +29,11 @@ function Footer(props) {
         }
       }}
       showLabels
-      className={classes.footer}
+      sx={{
+        width: '100%',
+        position: 'fixed',
+        bottom: 0,
+      }}
     >
       <BottomNavigationAction
         value="#who"
@@ -48,17 +41,22 @@ function Footer(props) {
         icon={<FontAwesomeIcon icon={faUserCircle} size="2x" />}
       />
       <BottomNavigationAction
-        value={process.env.REACT_APP_MY_GITHUB || ""}
+        value={"https://github.com/tulimaki"}
         label="GitHub"
         icon={<FontAwesomeIcon icon={faGithub} size="2x" />}
       />
       <BottomNavigationAction
-        value={process.env.REACT_APP_MY_LINKEDIN || ""}
+        value={"https://www.flickr.com/photos/196716913@N06/"}
+        label="Flickr"
+        icon={<FontAwesomeIcon icon={faFlickr} size="2x" />}
+      />
+      <BottomNavigationAction
+        value={"https://firehill.tech"}
         label="LinkedIn"
         icon={<FontAwesomeIcon icon={faLinkedin} size="2x" />}
       />
       <BottomNavigationAction
-        value={process.env.REACT_APP_MY_PAYPAL || ""}
+        value={"https://firehill.tech"}
         label="PayPal.Me"
         icon={<FontAwesomeIcon icon={faPaypal} size="2x" />}
       />
@@ -66,4 +64,4 @@ function Footer(props) {
   );
 }
 
-export default withStyles(styles)(Footer);
+export default Footer;

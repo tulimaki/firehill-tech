@@ -2,30 +2,31 @@ import React from 'react';
 import {
   List,
   ListItem,
-  Typography,
-  withStyles
-} from '@material-ui/core';
+  Typography
+} from '@mui/material';
 
-const styles = theme => ({
-  listItem: {
-    justifyContent: 'center',
-  }
-})
-
-function Info(props) {
-  const { classes } = props;
-
-  console.log(process.env.REACT_APP_MY_SKILLS)
-  const who = (process.env.REACT_APP_MY_SKILLS || "").split('&')
+function Info() {
+  const who = [
+    "Web Developer, Full Stack",
+    "Django, .NET, Flutter",
+    "Python, VB, C#, Dart",
+    "React, React Native",
+    "HTML, CSS, JS",
+    "AWS, Digital Ocean, Firebase, Heroku, Upcloud",
+    "Git, GitHub",
+    "Scrum, eCommerce, ERP, Logistics, Production",
+  ]
   return (
     <List>
       {who.map(value => (
           <ListItem
             key={value}
-            className={classes.listItem}
+            sx={{
+              justifyContent: 'center',
+            }}
           >
             <Typography variant="body1">
-              { value.trimLeft() }
+              { value.trimStart() }
             </Typography>
           </ListItem>
       ))}
@@ -33,4 +34,4 @@ function Info(props) {
   );
 }
 
-export default withStyles(styles)(Info);
+export default Info;
